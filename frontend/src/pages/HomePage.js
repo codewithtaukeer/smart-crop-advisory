@@ -34,12 +34,36 @@ const HomePage = () => {
       path: "/weather-soil"
     },
     {
-      title: "Pest Detection",
+      title: t("pestDetection"),
       description: "AI-powered pest identification using camera technology",
       icon: Bug,
       color: "text-red-600 dark:text-red-400",
       bgColor: "bg-red-50 dark:bg-red-950",
       path: "/pest-detection"
+    },
+    {
+      title: t("market"),
+      description: "Real-time crop prices and market trends across regions",
+      icon: TrendingUp,
+      color: "text-emerald-600 dark:text-emerald-400",
+      bgColor: "bg-emerald-50 dark:bg-emerald-950",
+      path: "/market"
+    },
+    {
+      title: t("schemes"),
+      description: "Government schemes, subsidies, and loan opportunities for farmers",
+      icon: Award,
+      color: "text-purple-600 dark:text-purple-400",
+      bgColor: "bg-purple-50 dark:bg-purple-950",
+      path: "/schemes"
+    },
+    {
+      title: t("naturalSolutions"),
+      description: "Organic and eco-friendly farming solutions for sustainable agriculture",
+      icon: Sprout,
+      color: "text-teal-600 dark:text-teal-400",
+      bgColor: "bg-teal-50 dark:bg-teal-950",
+      path: "/natural-solutions"
     }
   ];
 
