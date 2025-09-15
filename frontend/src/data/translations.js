@@ -6,6 +6,7 @@ export const translations = {
     chatbot: "Chatbot",
     cropRecommendation: "Crop Recommendation",
     weatherSoil: "Weather & Soil",
+    pestDetection: "Pest Detection",
     about: "About",
     contact: "Contact",
     
