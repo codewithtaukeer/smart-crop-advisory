@@ -103,6 +103,9 @@ export const translations = {
     cropRecommendation: "ਫਸਲ ਸਿਫਾਰਿਸ਼",
     weatherSoil: "ਮੌਸਮ ਅਤੇ ਮਿੱਟੀ",
     pestDetection: "ਕੀਟ ਪਛਾਣ",
+    market: "ਮਾਰਕੀਟ", 
+    schemes: "ਯੋਜਨਾਵਾਂ",
+    naturalSolutions: "ਕੁਦਰਤੀ ਹੱਲ",
     about: "ਸਾਡੇ ਬਾਰੇ",
     contact: "ਸੰਪਰਕ",
     
