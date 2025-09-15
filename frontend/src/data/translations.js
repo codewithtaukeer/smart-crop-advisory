@@ -7,6 +7,9 @@ export const translations = {
     cropRecommendation: "Crop Recommendation",
     weatherSoil: "Weather & Soil",
     pestDetection: "Pest Detection",
+    market: "Market",
+    schemes: "Schemes", 
+    naturalSolutions: "Natural Solutions",
     about: "About",
     contact: "Contact",
     
