@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
 import { useTheme } from "../contexts/ThemeContext";
 import { useLanguage } from "../contexts/LanguageContext";
@@ -9,15 +10,17 @@ const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
   const { language, setLanguage, t } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   const navItems = [
-    { key: "home", href: "#home" },
-    { key: "features", href: "#features" },
-    { key: "chatbot", href: "#chatbot" },
-    { key: "cropRecommendation", href: "#crop-recommendation" },
-    { key: "weatherSoil", href: "#weather-soil" },
-    { key: "about", href: "#about" },
-    { key: "contact", href: "#contact" }
+    { key: "home", label: t("home"), path: "/" },
+    { key: "features", label: t("features"), path: "/" },
+    { key: "chatbot", label: t("chatbot"), path: "/chatbot" },
+    { key: "cropRecommendation", label: t("cropRecommendation"), path: "/recommendation" },
+    { key: "weatherSoil", label: t("weatherSoil"), path: "/weather-soil" },
+    { key: "pestDetection", label: "Pest Detection", path: "/pest-detection" },
+    { key: "about", label: t("about"), path: "/about" },
+    { key: "contact", label: t("contact"), path: "/contact" }
   ];
 
   const languages = [
@@ -26,12 +29,11 @@ const Navbar = () => {
     { code: "pa", name: "ਪੰਜਾਬੀ" }
   ];
 
-  const scrollToSection = (href) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+  const isActivePath = (path) => {
+    if (path === "/") {
+      return location.pathname === "/";
     }
-    setIsMobileMenuOpen(false);
+    return location.pathname === path;
   };
 
   return (
@@ -40,22 +42,26 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-green-600 dark:text-green-400">
+            <Link to="/" className="text-2xl font-bold text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 transition-colors">
               🌾 Smart Crop Advisory
-            </h1>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navItems.map((item) => (
-                <button
+                <Link
                   key={item.key}
-                  onClick={() => scrollToSection(item.href)}
-                  className="px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent transition-all duration-200"
+                  to={item.path}
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                    isActivePath(item.path)
+                      ? "text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-950"
+                      : "text-muted-foreground hover:text-foreground hover:bg-accent"
+                  }`}
                 >
-                  {t(item.key)}
-                </button>
+                  {item.label}
+                </Link>
               ))}
             </div>
           </div>
@@ -118,13 +124,18 @@ const Navbar = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-border">
               {navItems.map((item) => (
-                <button
+                <Link
                   key={item.key}
-                  onClick={() => scrollToSection(item.href)}
-                  className="block px-3 py-2 rounded-md text-base font-medium text-muted-foreground hover:text-foreground hover:bg-accent transition-all duration-200 w-full text-left"
+                  to={item.path}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+                    isActivePath(item.path)
+                      ? "text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-950"
+                      : "text-muted-foreground hover:text-foreground hover:bg-accent"
+                  }`}
                 >
-                  {t(item.key)}
-                </button>
+                  {item.label}
+                </Link>
               ))}
             </div>
           </div>
