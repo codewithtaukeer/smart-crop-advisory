@@ -18,7 +18,10 @@ const Navbar = () => {
     { key: "chatbot", label: t("chatbot"), path: "/chatbot" },
     { key: "cropRecommendation", label: t("cropRecommendation"), path: "/recommendation" },
     { key: "weatherSoil", label: t("weatherSoil"), path: "/weather-soil" },
-    { key: "pestDetection", label: "Pest Detection", path: "/pest-detection" },
+    { key: "pestDetection", label: t("pestDetection"), path: "/pest-detection" },
+    { key: "market", label: t("market"), path: "/market" },
+    { key: "schemes", label: t("schemes"), path: "/schemes" },
+    { key: "naturalSolutions", label: t("naturalSolutions"), path: "/natural-solutions" },
     { key: "about", label: t("about"), path: "/about" },
     { key: "contact", label: t("contact"), path: "/contact" }
   ];
