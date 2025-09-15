@@ -39,7 +39,6 @@ const Navbar = () => {
     { code: "pa", name: "ਪੰਜਾਬੀ" },
   ];
 
-  // Refs for click-away
   const languageRef = useRef();
   const featuresRef = useRef();
 
@@ -75,7 +74,6 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6 relative">
-            {/* Home */}
             <Link
               to="/"
               className="px-4 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-green-50 dark:hover:bg-green-950 transition-colors"
@@ -83,7 +81,6 @@ const Navbar = () => {
               {t("home")}
             </Link>
 
-            {/* Features Button */}
             <div className="relative" ref={featuresRef}>
               <Button
                 variant="ghost"
@@ -109,7 +106,6 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* About and Contact Links */}
             <Link
               to="/about"
               className="px-4 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-green-50 dark:hover:bg-green-950 transition-colors"
@@ -144,7 +140,7 @@ const Navbar = () => {
                       key={lang.code}
                       onClick={() => {
                         setLanguage(lang.code);
-                        setIsLanguageOpen(false); // close after selection
+                        setIsLanguageOpen(false);
                       }}
                       className={`px-2 py-1 rounded-md text-left text-sm ${
                         language === lang.code
@@ -172,6 +168,18 @@ const Navbar = () => {
                 <Sun className="h-5 w-5" />
               )}
             </Button>
+
+            {/* Login / Signup Buttons */}
+            <Link to="/login">
+              <Button variant="outline" className="px-4 py-1 text-sm">
+                {t("login")}
+              </Button>
+            </Link>
+            <Link to="/signup">
+              <Button variant="default" className="px-4 py-1 text-sm">
+                {t("signup")}
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
