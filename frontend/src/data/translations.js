@@ -51,6 +51,7 @@ export const translations = {
     chatbot: "चैटबॉट",
     cropRecommendation: "फसल सुझाव",
     weatherSoil: "मौसम और मिट्टी",
+    pestDetection: "कीट पहचान",
     about: "हमारे बारे में",
     contact: "संपर्क",
     
