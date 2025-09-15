@@ -96,6 +96,7 @@ export const translations = {
     chatbot: "ਚੈਟਬੋਟ",
     cropRecommendation: "ਫਸਲ ਸਿਫਾਰਿਸ਼",
     weatherSoil: "ਮੌਸਮ ਅਤੇ ਮਿੱਟੀ",
+    pestDetection: "ਕੀਟ ਪਛਾਣ",
     about: "ਸਾਡੇ ਬਾਰੇ",
     contact: "ਸੰਪਰਕ",
     
