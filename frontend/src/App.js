@@ -29,6 +29,9 @@ function App() {
                 <Route path="/recommendation" element={<RecommendationPage />} />
                 <Route path="/weather-soil" element={<WeatherSoilPage />} />
                 <Route path="/pest-detection" element={<PestDetectionPage />} />
+                <Route path="/market" element={<MarketPage />} />
+                <Route path="/schemes" element={<SchemesPage />} />
+                <Route path="/natural-solutions" element={<NaturalSolutionsPage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
               </Routes>
