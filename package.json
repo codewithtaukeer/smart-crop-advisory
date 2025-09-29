@@ -1,5 +1,27 @@
 {
   "dependencies": {
     "date-fns": "^3.6.0"
-  }
+  },
+  "name": "smart-crop-advisory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codewithtaukeer/smart-crop-advisory.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codewithtaukeer/smart-crop-advisory/issues"
+  },
+  "homepage": "https://github.com/codewithtaukeer/smart-crop-advisory#readme"
 }
